@@ -44,7 +44,7 @@ function game() {
   }
   compArray.push(key);
   var keyid = "#" + key;
-  var src2 = "sounds/" + key + ".mp3";
+  var src2 = key + ".mp3";
   var audio2 = new Audio(src2);
   audio2.play();
   document.querySelector(keyid).classList.add("pressed");
@@ -64,7 +64,7 @@ function gameLoop(event) {
       if (
         inputArray[inputArray.length - 1] == compArray[inputArray.length - 1]
       ) {
-        var src = "sounds/" + input + ".mp3";
+        var src = input + ".mp3";
         var audio = new Audio(src);
         audio.play();
         document.querySelector("#"+input).classList.add("pressed");
@@ -79,7 +79,7 @@ function gameLoop(event) {
         document.querySelector("#level-title").textContent =
           "Game Over, Press Any Key to Restart";
         document.body.classList.add("game-over");
-        var wrong = new Audio("sounds/wrong.mp3");
+        var wrong = new Audio("wrong.mp3");
         wrong.play();
         setTimeout(function () {
           document.body.classList.remove("game-over");
