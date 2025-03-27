@@ -22,6 +22,7 @@ function simon() {
 }
 
 function game() {
+  gameStarted= true;
   count += 1;
   title = "Level " + count;
   document.querySelector("#level-title").textContent = title;
