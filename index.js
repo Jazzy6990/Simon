@@ -1,5 +1,4 @@
 var gameStarted = false;
-var sequenceDone = false;
 let inputArray = [];
 var gameOver= false;
 var count = 0;
@@ -53,11 +52,11 @@ function game() {
   }, 100);
   inputArray.length=0;
   gameOver = false;
-  sequenceDone = true;
+  
 }
 
 function gameLoop(event) {
-  if (sequenceDone == true) {
+  
     if (gameOver == false) {
       var input = event.target.id;
       inputArray.push(input);
@@ -87,5 +86,5 @@ function gameLoop(event) {
         gameStarted = false;
       }
     }
-  }
+ 
 }
